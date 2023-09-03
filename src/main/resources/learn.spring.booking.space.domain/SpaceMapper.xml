@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="learn.spring.booking.space.domain.SpaceMapper">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into space (name, price, address)
+        values (#{itemName}, #{price}, #{address})
+    </insert>
+
+    <update id="update">
+        update space
+        set name=#{updateParam.name},
+            price=#{updateParam.price},
+            address=#{updateParam.address}
+        where id = #{id}
+    </update>
+
+    <select id="findById" resultType="Item">
+        select id, name, address, price
+        from space
+        where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="Item">
+        select id, name, address, price
+        from space
+        <where>
+            <if test="itemName != null and itemName != ''">
+                and name like concat('%', #{itemName}, '%')
+            </if>
+            <if test="maxPrice != null">
+                and price &lt;= #{maxPrice}
+            </if>
+        </where>
+    </select>
+
+</mapper>
