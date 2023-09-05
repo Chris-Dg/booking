@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
 
 @Mapper
 public interface SpaceMapper {

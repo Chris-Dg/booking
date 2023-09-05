@@ -1,7 +1,5 @@
 package learn.spring.booking.advanced.trace.helloTrace;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import learn.spring.booking.advanced.trace.TraceStatus;
 import org.junit.jupiter.api.Test;
 

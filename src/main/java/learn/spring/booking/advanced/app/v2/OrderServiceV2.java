@@ -2,7 +2,6 @@ package learn.spring.booking.advanced.app.v2;
 
 import learn.spring.booking.advanced.trace.TraceId;
 import learn.spring.booking.advanced.trace.TraceStatus;
-import learn.spring.booking.advanced.trace.helloTrace.HelloTraceV1;
 import learn.spring.booking.advanced.trace.helloTrace.HelloTraceV2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
